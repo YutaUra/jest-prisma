@@ -4,10 +4,10 @@
   "version": "1.4.0",
   "scripts": {
     "bootstrap": "npm run generate",
-    "migrate:test:ci": "DATABASE_URL=\"file:./test.db\" prisma migrate dev",
+    "migrate:test:ci": "DATABASE_URL=\"postgres://postgres:postgres@localhost:5432/postgres?schema=public\" prisma migrate dev",
     "generate": "prisma generate",
     "test": "jest",
-    "test:ci": "DATABASE_URL=\"file:./test.db\" jest"
+    "test:ci": "DATABASE_URL=\"postgres://postgres:postgres@localhost:5432/postgres?schema=public\" jest"
   },
   "devDependencies": {
     "@quramy/jest-prisma": "*",
